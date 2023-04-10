@@ -79,7 +79,7 @@ body{
     }
 
 
-    .cotizador{
+    /* .cotizador{
         display: grid;
         background-color: blue;
         border: 2px solid black;
@@ -234,7 +234,7 @@ body{
                 grid-column:1/7;
                 grid-row: 8/13;
                 text-align: center;
-            }
+            } */
 
 
 .botones{
