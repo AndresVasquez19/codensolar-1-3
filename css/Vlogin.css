@@ -16,7 +16,6 @@
 
 .body{
     background: linear-gradient(#0f172ac7, #0a507169, #54555460),url(../img/panelsolar.jpg);
-    margin-bottom: 10px;
 }
 
 .login{
@@ -24,20 +23,7 @@
 }
 
 
-.btn1{
-    margin: 20px 0;
-    font-size: 1.6em;
-    font-weight: 600;
-    letter-spacing: 1px;
-    border: none;
-    border-radius: 7px;
-    padding: 8px 0;
-    margin-top: 35px;
-    background: linear-gradient(97deg, #0F172A 0%,  #545554 50%, #40C92A 100%);
-    /* background: linear-gradient(97deg, #5f00ff 0%, #cd00ff 50%, #fb2091 100%);  */
-    color: #fff;
-    cursor: pointer;
-}
+
 
     .container{
         max-width: 480px;
@@ -234,3 +220,22 @@
 .col {
     border: 2px solid black;
 } */
+
+
+.volver {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 10px;
+}
+
+.volver1{
+    background-color: #0e1734;
+    padding:10px;
+    border-radius: 5px;
+    border:  2px solid #40C92A;
+    font-size: 20px;
+    font-weight: bolder;
+    text-decoration: none;
+}
+

@@ -33,6 +33,14 @@ const myProducts = [
     otherProducts: "titulo 4.1",
     price: 5000,
   },
+  {
+    title: "panel solar",
+    calificacion: 5,
+    description: "esto es una referencia de descripcion",
+    caracteristicas: "feo",
+    otherProducts: "titulo 4.1",
+    price: 5000,
+  },
 ];
 
 const renderProducts = (listOfProducts) => {

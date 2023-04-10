@@ -151,7 +151,16 @@ body{
             grid-column:1/6;
             grid-row: 1/13;
             text-align: center;
+
         }
+
+        img{
+            width: inherit;
+            height: inherit;
+            object-fit:cover;
+        }
+
+
 
         .titulo{
             background-color: rgb(100, 135, 170);

@@ -53,8 +53,7 @@ nav ol li a{
    text-decoration: none;
    text-transform: capitalize;
    letter-spacing: 1px;
-   padding: 5px 25px;
-
+   padding: 5px 20px;
 }
 nav ol li:hover a{
    background: #fff;
