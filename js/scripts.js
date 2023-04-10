@@ -2,6 +2,8 @@ const productBox = document.getElementById("products-box");
 
 const idProducts = getIds();
 
+const quoteTemplate = document.getElementById("cotizacion").content;
+
 /* 
 name:"Nevera solar 50 LT ECO"
 description:"Un sistema de generación de energía eléctrica mediante paneles fotovoltaicos, ECO AMIGABLE/24WHORA/45X39X46,5/PESO 22 KG"
@@ -16,6 +18,8 @@ price:1412900
 fetch("http://127.0.0.1:8000/products/all")
 .then(response => response.json())
 .then(products => {
+  const jsonInfo = [];
+
   idProducts.forEach(id => {
     const product = products.find(p => p.id === id);
     const similarProduct = products.find(p => p.category_id === product.category_id && p.id != product.id).name;
@@ -33,11 +37,29 @@ fetch("http://127.0.0.1:8000/products/all")
       <div class="agregar"><p>Agregar</p></div>
     </div>
     `
+
+    jsonInfo.push({product_id:id});
   });
+
+  fetch("http://127.0.0.1:8000/products/cotizacion",{
+    method:"POST",
+    headers: {'Content-Type': 'application/json'},
+    body:JSON.stringify(jsonInfo),
+  })
+  .then((response)=>response.json())
+  .then(quote => {
+    quote.consumptions.forEach(consumption => {
+      document.querySelector(".cotizador").appendChild(createQuote(consumption));
+    });
+  }) 
+  .catch(error => {console.log(error);});
+
 })
+.catch((error) => {console.log(error);})
 
 
 // Funciones auxiliares -----------------------------------------------------------------------------
+
 function getIds() {
   let idsValidos = false;
 
@@ -62,6 +84,7 @@ function getIds() {
     }
   }
 }
+
 function generarNumeroAleatorio() {
   // Generar un número aleatorio entre 0 y 1
   const numeroAleatorio = Math.random();
@@ -75,6 +98,7 @@ function generarNumeroAleatorio() {
   // Devolver el número generado
   return numeroRedondeado;
 }
+
 function formatearNumero(numero) {
   // Convertir el número a un string y separar la parte entera de la decimal
   const [parteEntera, parteDecimal] = numero.toString().split('.');
@@ -89,3 +113,26 @@ function formatearNumero(numero) {
   return numeroFormateado;
 }
 
+function createQuote(info) {
+  const quote = document.importNode(quoteTemplate,true)
+  const quoteInfo = {
+    name : quote.querySelector(".inf2 .nombre"),
+    hours : quote.querySelector(".inf2 .horas"),
+    amount : quote.querySelector(".inf2 .cantidad"),
+    consumption : quote.querySelector(".inf2 .consumo"),
+    usedHours : quote.querySelector(".inf2 .horasuso"),
+    lossPercentage : quote.querySelector(".inf2 .porcentajeperdidas"),
+    totalConsumption : quote.querySelector(".inf2 .cantidadconsumo"),
+  }
+
+  // Asignar la información del objeto a cada elemento de quoteInfo
+  quoteInfo.name.textContent = info.product;
+  quoteInfo.hours.textContent = info.hours_used;
+  quoteInfo.amount.textContent = info.amount;
+  quoteInfo.consumption.textContent = info.consumption_hour;
+  quoteInfo.usedHours.textContent = info.hours_used;
+  quoteInfo.lossPercentage.textContent = info.loss_percentage;
+  quoteInfo.totalConsumption.textContent = info.total_consumption;
+
+  return quote;
+}
