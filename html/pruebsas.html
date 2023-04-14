@@ -1,31 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="../css/main.css">
-	<link rel="stylesheet" type="text/css" href="../css/pruebas.css">
-    <title>vista cotizador</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../css/main.css" />
+    <link rel="stylesheet" type="text/css" href="../css/pruebas.css" />
+    <title>pruebas</title>
 </head>
 <body>
-    <nav>
-        <div class="contenedor nav-content">
-            <div class="logo">
-                <h2>Codensolar</h2> 
+    <div class="general">
+        <div class="gridnav">
+            <div class="navbar">
+                <p>Descuentos  del 20% Paneles solares | Descuento del 15% en neveras  | descuento del 5% kits</p>
             </div>
-            <a href="#" class="enlaces">Inicio</a>
-            <a href="#" class="enlaces">Acerca de</a>
-            <a href="#" class="enlaces">Contacto</a>
+            <div class="navbar2">
+                <p> Por registrarte e ingresar tendras un descuento del 5% en paneles Policristalinos</p>
+            </div>
         </div>
-    </nav>
-    <main class="contenedor principal">
-        <div class="contenedor-textos">
-            <h1 class="titulo">Bienvenido a AlexCG Design</h1>
-            <p class="copy">Aprende diseño web modenro, con nuestros cursos gratis o premium</p>
-            <a href="#" class="cta">Aprender ahora</a>
+    <!-- <div class="anuncios">
+        <div class="anun1">
+        <p>anuncio1</p>
         </div>
-        <img src="learn.svg" alt="" class="ilustracion">
-    </main>
+        <div class="anun2">
+        <p>anuncio2</p>
+        </div>
+    </div> -->
+
+<div class="header">
+    <input type="checkbox" id="check">
+	<nav>
+		<div class="icon">Conden<b style="color: rgb(4, 253, 4);">S</b>olar</div>
+		<div class="search_box">
+			<input type="search" placeholder="Search here">
+			<span class="fa fa-search"></span>
+		</div>
+		<ol>
+			<li><a href="#">Inicio</a></li>
+			<li><a href="#">Productos</a></li>
+			<li><a href="#">Servicios</a></li>
+			<li><a href="../html/Vlogin.html">Ingresar</a></li>
+            <li><a href="../html/Vlogin.html"> <b style="color: rgb(4, 253, 4)";>Registrarse</b></a></li>
+			<!-- <button class="button" type="button"><a href="html/Vlogin.html">registrarte</a> </button> -->
+		</ol>
+
+		<label for="check" class="bar">
+			<span class="fa fa-bars" id="bars"></span>
+			<span class="fa fa-times" id="times"></span>
+		</label>
+	</nav>  
+</div>
+
+
+    <div class="imagenes">
+        <div class="imagen1 img"><img src="../img/prueba.jpg" alt="img">imagen 1</div>
+        <div class="imagen2 img"><img src="../img/prueba.jpg" alt="img">imagen2</div>
+        <div class="imagen3 img"><img src="../img/prueba.jpg" alt="img">imagen3</div>
+        <div class="imagen4 img"><img src="../img/prueba.jpg"alt="img">imagen4</div>
+    </div>
+
+
+
+    <div class="cotizador1">
+        <div  class="products-box" id="products-box">
+                <div class="img1">
+                    <img src="" alt="img"></div>    
+                <div class="titulo">
+                    <h3>Nevera x 110L</h3>
+
+                </div>    
+                <!-- <div class="calificacion">
+                    <p>calificacion 4.5</p>
+
+                </div>     -->
+                <div class="descripcion">
+                    <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, magnam illo sequi blanditiis labore doloribus praesentium at quae sed corporis earum reiciendis, nemo ab! Consequatur amet quasi maxime voluptatem laboriosam!
+                    </p>
+
+                </div>    
+
+                <div class="precio">
+                    <p>$3.5000.00</p>
+
+                </div> 
+                
+                <div class="caracteristicas">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus consequuntur ipsum officiis laudantium, voluptatibus qui magnam obcaecati nesciunt pariatur nihil corporis commodi odio perferendis suscipit ipsam minima aliquam? Quo, impedit.</p>
+                </div>    
+                <!-- <div class="comprar">
+                    <p>COMPRAR</p>
+                </div>
+                <div class="otros">
+                    <p>otros</p>
+                </div>   -->
+                <div class="agregar">
+                    <p>Agregar al carrito</p>
+                </div>
+        </div>
+        <div class="cotizador">
+            <div class="inf2">
+                <div class="eliminar-unitario">❌</div>
+                <div class="nombre">titulo-unitario</div>
+                <div class="precio-unitario">$$(cantidad) </div>
+                <!-- <div class="cantidad">cantidad</div> -->
+                <div class="horas-uso">horas de uso</div>
+                <div class="horas-sol">horas de sol Necesarias</div>
+                <div class="consumo-hora">consumo hora</div>
+                <div class="consumo-dia"> consumo por dia </div>
+                <div class="porcentajeperdidas">porcentajeperdidas</div>
+                <div class="cantidadconsumo">cantidadconsumo</div>
+
+            </div>
+
+            <div class="inf3">
+
+                <div class="titulorequerimientos">Requerimiento</div>
+
+                <div class="reguladores-requeridas">reguladores requeridas</div>
+                <div class="reguladores-tipo">reguladores TIPO cual</div>
+                <!-- <div class="reguladores-sustento">reguladores  sustento</div> -->
+                <div class="reguladores-precio">reguladores PRECIO</div>
+
+                <div class="paneles-requeridas">paneles requeridas</div>
+                <div class="paneles-tipo">paneles TIPO cual</div>
+                <!-- <div class="paneles-sustento">paneles sustento</div> -->
+                <div class="paneles-precio">Paneles precio</div>
+
+                <div class="baterias-requeridas">bateria requeridas</div>
+                <div class="baterias-tipo">bateria TIPO cual</div>
+                <!-- <div class="baterias-sustento"> bateria sustento</div> -->
+                <div class="baterias-precio"> bateria precio</div>
+
+                <div class="breakers-requeridas">brakers requeridas</div>
+                <div class="breakers-tipo">brakers TIPO cual</div>
+                <!-- <div class="breakers-sustento"> brakers sustento</div> -->
+                <div class="breakers-precio"> brakers precio</div>
+
+                <div class="precio-acumulado">precio Acumulado</div>
+                <div class="eliminar-carrito">eliminar-carrito</div>
+            </div>
+        </div>
+    </div>
+<!-- 
+<div class="contacto">
+    <div class="horizontal-padding vertical-padding">
+        <section class="contact" id="contact">
+        <h2 class="contact-title">Contacto</h2>
+        <div class="contact-details">
+            <div class="contact-details-group">
+            <p class="contact-label">Dirección:</p>
+            <p class="contact-text">Bogota colombia</p>
+            </div>
+            <div class="contact-details-group">
+            <p class="contact-label">Email:</p>
+            <p class="contact-text">codensolar@hotmail.com</p>
+            </div>
+            <div class="contact-details-group">
+            <p class="contact-text">
+            Deje su mensaje. Nuestro equipo de atencion al cliente se comunicara contigo en las proximas 24h
+            </p>
+            </div>
+        </div>
+        <form class="contact-form" name="contact" netlify>
+            <div class="contact-form-group">
+            <label for="name">Nombre</label>
+            <input required type="text" name="name" id="name" />
+            </div>
+            <div class="contact-form-group">
+            <label for="email">Email</label>
+            <input required type="email" name="email" id="email" />
+            </div>
+            <div class="contact-form-group">
+            <label for="message">Mensaje</label>
+            <textarea required name="message" id="message" rows="6"></textarea>
+            </div>
+    
+            <button type="submit" class="contact-form-submit">Enviar</button>
+        </form>
+        <nav class="social">
+            <ul class="social-list">
+            <li>
+                <a href="https://twitter.com/ymulenll">
+                <img src="../img/social/twitter.svg" alt="twitter profile" />
+                </a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/yoelvism" class="social-link"
+                ><img src="../img/social/youtube.svg" alt="youtube profile"
+                /></a>
+            </li>
+            <li>
+                <a href="https://github.com/ymulenll" class="social-link">
+                <img src="../img/social/github.svg" alt="github profile" />
+                </a>
+            </li>
+            <li>
+                <a
+                href="https://www.linkedin.com/in/yoelvismulen"
+                class="social-link"
+                >
+                <img src="../img/social/linkedin.svg" alt="linkedin profile" />
+                </a>
+            </li>
+            </ul>
+        </nav>
+        </section>
+    </div>
+</div> -->
+
+<!-- 
+    <div class="footer">
+        <div class="fot">footer real</div>
+    </div> -->
+
+    <footer class="footer">
+		<div class="colum1">
+			<p>	Somos distribudores mayoristas</p>
+			<p>comunicate con nosotros  </p>
+			<p>Telefono : 30200663</p>
+			<p>Correo: Condensolar@hotmail.com</p>
+		</div>
+		<div class="colum2">
+	
+			<p>Mision</p>
+			<p>vision</p>
+			<p>Contacto</p>
+			<p>otros</p>
+		</div>
+	
+		<div class="colum3">
+			<p>UBICADOS</p>
+			<p>Cr 63 A#3-49 Barrio Pradera</p>
+			<p>Localidad Puente aranda</p>
+			<p>Bogota dc</p>
+		</div> 
+		
+		<div class="pagos">
+			<p>MEDIOS DE PAGO ACEPTADOS</p>
+			<p>pagos bancolombia | bbva | fallabela etc </p>
+		</div>
+	
+		<div class="derechos">
+			<p>2023 C Condensolar.Todos </p>
+			<P>los derechos reservados Por Group Elite</P>
+		</div>
+	
+</footer> 
+
+</div>
+    <!-- <script src="../js/scripts.js"></script> -->
 </body>
 </html>

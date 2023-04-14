@@ -6,6 +6,7 @@
     --text-color: black;
     --navbar-shallow-color: #e5e5e5;
     --menu-mobile-background-color: #3a4460;
+    --font-primary: font-family: 'Roboto', sans-serif;
 }
 
 html {
